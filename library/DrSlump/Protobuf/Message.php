@@ -59,6 +59,10 @@ abstract class Message implements \ArrayAccess
 
     // Implements ArrayAccess for extensions and unknown fields
 
+    /**
+     * @return bool
+     */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         if (is_numeric($offset)) {
@@ -68,6 +72,10 @@ abstract class Message implements \ArrayAccess
         }
     }
 
+    /**
+     * @return void
+     */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_numeric($offset)) {
@@ -77,6 +85,10 @@ abstract class Message implements \ArrayAccess
         }
     }
 
+    /**
+     * @return mixed
+     */
+    #[\ReturnTypeWillChange]
     public function offsetGet( $offset )
     {
         if (is_numeric($offset)) {
@@ -86,6 +98,10 @@ abstract class Message implements \ArrayAccess
         }
     }
 
+    /**
+     * @return void
+     */
+    #[\ReturnTypeWillChange]
     public function offsetUnset( $offset )
     {
         if (is_numeric($offset)) {
